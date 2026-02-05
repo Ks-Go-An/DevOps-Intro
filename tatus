@@ -1,0 +1,4 @@
+error: gpg.ssh.allowedSignersFile needs to be configured and exist for ssh signature verification
+error: gpg.ssh.allowedSignersFile needs to be configured and exist for ssh signature verification
+[41mNo signature[m
+d73f3030920138efa20d0231b01c684e82ec7d2a N

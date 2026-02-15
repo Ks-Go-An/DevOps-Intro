@@ -1,6 +1,6 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
+on: [push, workflow_dispatch]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -15,4 +15,18 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: Gather system information
+        run: |
+          echo "========== OS Information =========="
+          uname -a
+          echo "========== CPU Cores =========="
+          nproc
+          echo "========== Memory Info =========="
+          free -h
+          echo "========== Disk Usage =========="
+          df -h
+          echo "========== Runner Info =========="
+          echo "Runner OS: ${{ runner.os }}"
+          echo "Runner name: ${{ runner.name }}"
+          echo "Runner temp directory: ${{ runner.temp }}"
       - run: echo "🍏 This job's status is ${{ job.status }}."
